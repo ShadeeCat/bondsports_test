@@ -3,6 +3,8 @@ import './App.css';
 
 import { PlayerListTypes } from './interfaces/PlayerListTypes';
 
+import { PlayerList } from './components/playerList';
+
 export const App = () => {
 	const [players, setPlayers] = useState<PlayerListTypes[]>([]);
 
@@ -22,6 +24,7 @@ export const App = () => {
 	return (
 		<div className="App">
 			<h1>hello</h1>
+			<PlayerList players={ players } />
 		</div>
   );
 }
