@@ -3,7 +3,7 @@ import './App.css';
 
 import { PlayerListTypes } from './interfaces/PlayerListTypes';
 
-import { PlayerList } from './components/playerList';
+import { PlayerList } from './components/LeftSide_playerList';
 
 export const App = () => {
 	const [players, setPlayers] = useState<PlayerListTypes[]>([]);
