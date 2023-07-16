@@ -35,7 +35,7 @@ export const FavoritePlayersList: React.FC<FavoritePlayerProps> = ({ favoritePla
 			{ favoritePlayers.map(player => (
 				<li key={ player.id }>
 					{ player.first_name } { player.last_name } - { player.position } { player.team.full_name }
-					<button onClick={ () => handleRemoveFavoriteClick(player) } >Remove Player</button>
+					<button className="RemoveButton" onClick={ () => handleRemoveFavoriteClick(player) } >Remove Player</button>
 				</li>
 			)) }
 		</ul>
