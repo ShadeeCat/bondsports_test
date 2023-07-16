@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 import { PlayerListTypes } from './interfaces/PlayerListTypes';
-import { FavoritePlayersList } from "./components/RightSide_favoritePlayerList"
 
+import { FavoritePlayersList } from "./components/RightSide_favoritePlayerList"
 import { PlayerList } from './components/LeftSide_playerList';
 
 export const App = () => {
@@ -29,13 +29,17 @@ export const App = () => {
 			setFavoritePlayers(prevFavorites => [...prevFavorites, player])
 		}
 	}
+
+	const handleRemoveFavorite = (player: PlayerListTypes) => {
+		setFavoritePlayers((prevFavorite) => prevFavorite.filter(favorite => favorite.id !== player.id))
+	}
 	
 	return (
 		<div className="App">
 			<PlayerList players={ players } onFavorite={ handleFavorite } />
 			<div className='rightSideList'>
 				<h2>List of favorite players</h2>
-				<FavoritePlayersList favoritePlayers={ favoritePlayers } />
+				<FavoritePlayersList favoritePlayers={ favoritePlayers } onRemoveFavorite={ handleRemoveFavorite } />
 		</div>
 		</div>
   );
