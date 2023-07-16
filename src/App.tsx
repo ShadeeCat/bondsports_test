@@ -36,11 +36,14 @@ export const App = () => {
 	
 	return (
 		<div className="App">
-			<PlayerList players={ players } onFavorite={ handleFavorite } />
+			<div className="leftSideList">
+				<h1>PlayerList</h1>
+				<PlayerList players={ players } onFavorite={ handleFavorite } />
+			</div>
 			<div className='rightSideList'>
 				<h2>List of favorite players</h2>
 				<FavoritePlayersList favoritePlayers={ favoritePlayers } onRemoveFavorite={ handleRemoveFavorite } />
-		</div>
+			</div>
 		</div>
   );
 }

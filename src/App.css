@@ -1,0 +1,35 @@
+.App {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: .5rem;
+}
+
+ul li:last-of-type {
+    padding-bottom: 0;
+}
+
+ul li::before {
+    content: "";
+    background-image: url("../public/basketball_ball.png");
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: .5rem;
+}
+
+ul li button {
+    margin-left: auto;
+}
+
+.rightSideList {
+    width: 28rem;
+}
